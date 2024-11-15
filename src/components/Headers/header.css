@@ -1,0 +1,123 @@
+/* Add this CSS to your styles or in a separate CSS file (e.g., header.css) */
+
+/* General header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #92b1dd;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+header .logo .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #4c90f0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+header .Menu {
+  display: none;
+}
+
+header .Menu svg {
+  cursor: pointer;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header ul li {
+  margin-left: 20px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+header ul li .menu {
+  display: none;
+}
+
+header .logo h3 {
+  margin: 0;
+}
+
+/* Mobile menu (hamburger icon) */
+@media (max-width: 768px) {
+  header .Menu {
+    display: block;
+  }
+
+  header .logo {
+    flex: 1;
+  }
+
+  header ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #aec8ec;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  header ul li {
+    margin: 15px 0;
+  }
+
+  header ul li a {
+    font-size: 18px;
+  }
+
+  header ul li .menu {
+    display: block;
+  }
+
+  /* Show the menu when hamburger is clicked */
+  header .Menu svg {
+    display: block;
+    cursor: pointer;
+  }
+
+  header .Menu svg:active {
+    color: #ccc;
+  }
+
+  header ul.show {
+    display: flex;
+  }
+}
+

@@ -1,0 +1,106 @@
+/* General reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and main page styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* App container to ensure full height and scrolling */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styling (fixed at top) */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #9fbae1;
+  padding: 10px 20px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .logo h3 {
+  font-size: 24px;
+  color: white;
+  margin-left: 10px;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+header ul li {
+  margin: 0 15px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+header .Menu svg {
+  cursor: pointer;
+}
+
+/* Pages styling (the main content area) */
+main {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure pages content area adapts well to the screen size */
+.pages {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: 60vh;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  header ul {
+    display: none; /* hide normal nav links */
+  }
+
+  header .Menu {
+    display: block; /* Show the hamburger menu */
+  }
+
+  header .logo {
+    flex: 1;
+  }
+
+  main {
+    padding: 10px;
+  }
+}

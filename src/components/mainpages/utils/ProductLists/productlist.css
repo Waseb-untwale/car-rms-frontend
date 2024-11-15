@@ -1,0 +1,154 @@
+/* General Reset for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Main product card container */
+  .product_card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .product_card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image Styling */
+  .product_card img {
+    width: 100%;
+    height: 200px; /* Set fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Zoom effect on hover */
+  }
+  
+  .product_card:hover img {
+    transform: scale(1.05); /* Slight zoom effect when hovering over the card */
+  }
+  
+  /* Product Info Box */
+  .product_box {
+    margin-top: 15px;
+    padding: 0 10px;
+  }
+  
+  .product_box h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .product_box span {
+    font-size: 16px;
+    color: #4c90f0;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .product_box p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 60px; /* Limit description height */
+  }
+  
+  /* Delete icon styling */
+  .product_card .delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #e74c3c;
+  }
+  
+  .product_card .delete-icon:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #c0392b;
+  }
+  
+  .product_card .delete-icon:active {
+    transform: scale(0.95);
+  }
+  
+  /* Button Render Section */
+  .product_card .btn-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Individual Action Button Styling */
+  .product_card .btn-actions button {
+    background-color: #4c90f0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .product_card .btn-actions button:hover {
+    background-color: #3578e5;
+  }
+  
+  .product_card .btn-actions button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Responsiveness: Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .product_card {
+      max-width: 100%;
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    .product_card img {
+      height: 180px; /* Reduce image height on mobile */
+    }
+  
+    .product_box h2 {
+      font-size: 16px; /* Smaller text on mobile */
+    }
+  
+    .product_box span {
+      font-size: 14px;
+    }
+  
+    .product_box p {
+      font-size: 12px;
+      height: auto; /* Allow description to expand on mobile */
+    }
+  
+    .product_card .delete-icon {
+      top: 5px;
+      right: 5px; /* Move the delete icon closer in smaller screens */
+    }
+  }
+  
